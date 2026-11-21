@@ -58,3 +58,32 @@ h5,
 h6 {
   text-wrap: balance;
 }
+
+/* ### CSS VARIABLES ### */
+
+:root {
+  --clr-neutral-950: hsl(214 37% 4%);
+  --clr-neutral-900: hsl(210 39% 7%);
+  --clr-neutral-800: hsl(211 30% 13%);
+  --clr-neutral-700: hsl(211 22% 24%);
+  --clr-neutral-600: hsl(210 18% 42%);
+  --clr-neutral-500: hsl(211 14% 50%);
+  --clr-neutral-400: hsl(211 13% 55%);
+  --clr-neutral-300: hsl(211 18% 68%);
+  --clr-neutral-100: hsl(208 49% 92%);
+  --clr-neutral-50: hsl(204 60% 97%);
+
+  --lime-500: hsl(77 90% 59%);
+  --lime-700: hsl(77 67% 39%);
+
+  --red-400: hsl(4 100% 74%);
+
+  --amber-400: hsl(40 100% 65%);
+
+  --navy-950: hsl(214 60% 2%);
+
+  --lime-alpha-60: hsl(77 90% 59% / 0.6);
+  --lime-alpha-40: hsl(77 90% 59% / 0.4);
+  --navy-alpha-80: hsl(214 60% 2% / 0.8);
+  --navy-alpha-60: hsl(214 60% 2% / 0.6);
+}
