@@ -131,6 +131,16 @@ h2 {
   font-weight: 800;
 } */
 
+/* ### UTILITIES ### */
+
+.text-accent {
+  color: var(--lime-500);
+}
+
+.hidden {
+  display: none;
+}
+
 /* ### GENERAL STYLING ### */
 
 body {
@@ -147,4 +157,9 @@ h3 {
   font-family: "Orbitron", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+a {
+  color: var(--lime-500);
+  text-decoration-style: dotted;
 }

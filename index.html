@@ -22,7 +22,7 @@
         <div class="display-section__header">
           <img src="./assets/images/logo.svg" alt="" class="logo" />
         </div>
-        <h1>// Join the nexus</h1>
+        <h1><span class="text-accent">//</span> Join the nexus</h1>
         <p class="subtitle">Initialize your NEONCORE identity</p>
         <hr />
         <!-- Operator ID readout (on tablet and mobile it becomes a one-line strip: Operator ID + callsign) -->
@@ -74,7 +74,9 @@
         </div>
         <form action="#">
           <div class="input-field">
-            <label for="callsign">> Callsign</label>
+            <label for="callsign"
+              ><span class="text-accent">></span> Callsign</label
+            >
             <input
               type="text"
               name="callsign"
@@ -99,7 +101,7 @@
             </div>
           </div>
           <div class="input-field">
-            <label for="callsign">> Email</label>
+            <label for="email"><span class="text-accent">></span> Email</label>
             <input
               type="email"
               name="email"
@@ -119,7 +121,7 @@
             </div>
           </div>
           <div class="input-field">
-            <label for="callsign">> Password</label>
+            <label for="password">> Password</label>
             <div class="password-input-container">
               <input type="password" name="password" id="password" />
               <button class="toggle-password-btn">
@@ -146,7 +148,9 @@
             </div>
           </div>
           <div class="input-field">
-            <label for="callsign">> Confirm</label>
+            <label for="confirm-password"
+              ><span class="text-accent">></span> Confirm</label
+            >
             <div class="password-input-container">
               <input
                 type="password"
@@ -176,8 +180,10 @@
                 id="terms-and-privacy"
               />
               <span
-                >I accept the <span>Terms</span> and
-                <span>Privacy Policy</span>.</span
+                >I accept the
+                <span class="text-accent"><a href="#">Terms</a></span> and
+                <span class="text-accent"><a href="#">Privacy Policy</a></span
+                >.</span
               >
             </div>
             <div class="input-field-validation-msgs">
@@ -196,7 +202,7 @@
         <!-- Sign-up form ends -->
         <div class="form__footer">
           <span>Already an operator?</span>
-          <span>Log in</span>
+          <span class="text-accent"><a href="#">Log in</a></span>
         </div>
       </section>
       <section class="success-section">
