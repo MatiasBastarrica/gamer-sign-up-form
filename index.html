@@ -68,178 +68,192 @@
       </section>
       <!-- Brand column ends -->
       <!-- Sign-up form starts -->
-      <section class="form-section">
-        <div class="form__header">
-          <span class="header-title">New operator</span>
-          <span class="form-fields-info-desk hidden">All fields required</span>
-          <!-- Mobile -->
-          <span class="form-fields-info-mob">All required</span>
-        </div>
-        <form action="#">
-          <div class="input-field">
-            <label for="callsign"
-              ><span class="text-accent">></span> Callsign</label
+      <section class="form-and-success-section">
+        <section class="form-section">
+          <div class="form__header">
+            <span class="header-title">New operator</span>
+            <span class="form-fields-info-desk hidden"
+              >All fields required</span
             >
-            <input
-              type="text"
-              name="callsign"
-              id="callsign"
-              placeholder="e.g. Vortex_07"
-            />
-            <div class="input-field-validation-msgs">
-              <span class="info-msg"
-                >3–20 characters: letters, numbers, _ or -</span
+            <!-- Mobile -->
+            <span class="form-fields-info-mob">All required</span>
+          </div>
+          <form action="#">
+            <div class="input-field">
+              <label for="callsign"
+                ><span class="text-accent">></span> Callsign</label
               >
-              <span class="error-msg-container hidden">
-                <div class="wrapper">
-                  <span
-                    ><img src="./assets/images/icon-alert.svg" alt=""
-                  /></span>
-                  <span class="error-message">
-                    <span class="missing-msg">Enter a callsign</span>
-                    <span class="too-short-msg">Use at least 3 characters</span>
-                    <span class="too-long-msg">Use 20 characters or fewer</span>
-                    <span class="bad-character-msg">
-                      Use letters, numbers, _ or - only
-                    </span>
-                  </span>
-                </div>
-              </span>
-            </div>
-          </div>
-          <div class="input-field">
-            <label for="email"><span class="text-accent">></span> Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="you@example.com"
-            />
-            <div class="input-field-validation-msgs">
-              <span class="error-msg-container hidden">
-                <div class="wrapper">
-                  <span
-                    ><img src="./assets/images/icon-alert.svg" alt=""
-                  /></span>
-                  <span class="error-message">
-                    <span class="missing-msg">Enter your email</span>
-                    <span class="bad-malformed-msg">
-                      Enter a valid email, like you@example.com
-                    </span>
-                  </span>
-                </div>
-              </span>
-            </div>
-          </div>
-          <div class="input-field">
-            <label for="password">> Password</label>
-            <div class="password-input-container">
-              <input type="password" name="password" id="password" />
-              <button class="toggle-password-btn">
-                <img src="./assets/images/icon-eye.svg" alt="" />
-              </button>
-            </div>
-            <!-- Dynamic: password strength -->
-            <!-- Weak Fair Good Strong password -->
-            <div class="password-strength-container">
-              <div class="first-level"></div>
-              <div class="second-level"></div>
-              <div class="third level"></div>
-              <div class="fourth-level"></div>
-            </div>
-            <div class="input-field-validation-msgs">
-              <span class="info-msg">At least 8 characters</span>
-              <span class="error-msg-container hidden">
-                <div class="wrapper">
-                  <span
-                    ><img src="./assets/images/icon-alert.svg" alt=""
-                  /></span>
-                  <span class="error-message">
-                    <span class="missing-msg">Enter a password</span>
-                    <span class="too-short-msg">Use at least 8 characters</span>
-                  </span>
-                </div>
-              </span>
-            </div>
-          </div>
-          <div class="input-field">
-            <label for="confirm-password"
-              ><span class="text-accent">></span> Confirm</label
-            >
-            <div class="password-input-container">
               <input
-                type="password"
-                name="confirm-password"
-                id="confirm-password"
+                type="text"
+                name="callsign"
+                id="callsign"
+                placeholder="e.g. Vortex_07"
               />
-              <button class="toggle-password-btn">
-                <img src="./assets/images/icon-eye.svg" alt="" />
-              </button>
+              <div class="input-field-validation-msgs">
+                <span class="info-msg"
+                  >3–20 characters: letters, numbers, _ or -</span
+                >
+                <span class="error-msg-container hidden">
+                  <div class="wrapper">
+                    <span
+                      ><img src="./assets/images/icon-alert.svg" alt=""
+                    /></span>
+                    <span class="error-message">
+                      <span class="missing-msg">Enter a callsign</span>
+                      <span class="too-short-msg"
+                        >Use at least 3 characters</span
+                      >
+                      <span class="too-long-msg"
+                        >Use 20 characters or fewer</span
+                      >
+                      <span class="bad-character-msg">
+                        Use letters, numbers, _ or - only
+                      </span>
+                    </span>
+                  </div>
+                </span>
+              </div>
             </div>
-            <div class="input-field-validation-msgs">
-              <span class="info-msg">At least 8 characters</span>
-              <span class="error-msg-container hidden">
-                <div class="wrapper">
-                  <span
-                    ><img src="./assets/images/icon-alert.svg" alt=""
-                  /></span>
-                  <span class="error-message">
-                    <span class="missing-msg">Confirm your password</span>
-                    <span class="mismatch-msg">Passwords don't match</span>
-                  </span>
-                </div>
-              </span>
-            </div>
-          </div>
-          <div class="input-field">
-            <div class="checkbox-container">
-              <input
-                type="checkbox"
-                name="terms-and-privacy"
-                id="terms-and-privacy"
-              />
-              <span
-                >I accept the
-                <span class="text-accent"><a href="#">Terms</a></span> and
-                <span class="text-accent"><a href="#">Privacy Policy</a></span
-                >.</span
+            <div class="input-field">
+              <label for="email"
+                ><span class="text-accent">></span> Email</label
               >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="you@example.com"
+              />
+              <div class="input-field-validation-msgs">
+                <span class="error-msg-container hidden">
+                  <div class="wrapper">
+                    <span
+                      ><img src="./assets/images/icon-alert.svg" alt=""
+                    /></span>
+                    <span class="error-message">
+                      <span class="missing-msg">Enter your email</span>
+                      <span class="bad-malformed-msg">
+                        Enter a valid email, like you@example.com
+                      </span>
+                    </span>
+                  </div>
+                </span>
+              </div>
             </div>
-            <div class="input-field-validation-msgs">
-              <span class="error-msg-container hidden">
-                <div class="wrapper">
-                  <span
-                    ><img src="./assets/images/icon-alert.svg" alt=""
-                  /></span>
-                  <span class="error-message">
-                    <span class="missing-msg"
-                      >Accept the terms to continue</span
-                    >
-                  </span>
-                </div>
-              </span>
+            <div class="input-field">
+              <label for="password">> Password</label>
+              <div class="password-input-container">
+                <input type="password" name="password" id="password" />
+                <button class="toggle-password-btn">
+                  <img src="./assets/images/icon-eye.svg" alt="" />
+                </button>
+              </div>
+              <!-- Dynamic: password strength -->
+              <!-- Weak Fair Good Strong password -->
+              <div class="password-strength-container">
+                <div class="first-level"></div>
+                <div class="second-level"></div>
+                <div class="third level"></div>
+                <div class="fourth-level"></div>
+              </div>
+              <div class="input-field-validation-msgs">
+                <span class="info-msg">At least 8 characters</span>
+                <span class="error-msg-container hidden">
+                  <div class="wrapper">
+                    <span
+                      ><img src="./assets/images/icon-alert.svg" alt=""
+                    /></span>
+                    <span class="error-message">
+                      <span class="missing-msg">Enter a password</span>
+                      <span class="too-short-msg"
+                        >Use at least 8 characters</span
+                      >
+                    </span>
+                  </div>
+                </span>
+              </div>
             </div>
-          </div>
-          <!-- Loading
+            <div class="input-field">
+              <label for="confirm-password"
+                ><span class="text-accent">></span> Confirm</label
+              >
+              <div class="password-input-container">
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                />
+                <button class="toggle-password-btn">
+                  <img src="./assets/images/icon-eye.svg" alt="" />
+                </button>
+              </div>
+              <div class="input-field-validation-msgs">
+                <span class="info-msg">At least 8 characters</span>
+                <span class="error-msg-container hidden">
+                  <div class="wrapper">
+                    <span
+                      ><img src="./assets/images/icon-alert.svg" alt=""
+                    /></span>
+                    <span class="error-message">
+                      <span class="missing-msg">Confirm your password</span>
+                      <span class="mismatch-msg">Passwords don't match</span>
+                    </span>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div class="input-field">
+              <div class="checkbox-container">
+                <input
+                  type="checkbox"
+                  name="terms-and-privacy"
+                  id="terms-and-privacy"
+                />
+                <span
+                  >I accept the
+                  <span class="text-accent"><a href="#">Terms</a></span> and
+                  <span class="text-accent"><a href="#">Privacy Policy</a></span
+                  >.</span
+                >
+              </div>
+              <div class="input-field-validation-msgs">
+                <span class="error-msg-container hidden">
+                  <div class="wrapper">
+                    <span
+                      ><img src="./assets/images/icon-alert.svg" alt=""
+                    /></span>
+                    <span class="error-message">
+                      <span class="missing-msg"
+                        >Accept the terms to continue</span
+                      >
+                    </span>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <!-- Loading
     Transmitting_ -->
-          <button type="submit" class="btn-accent">Initialize account</button>
-        </form>
-        <!-- Sign-up form ends -->
-        <div class="form__footer">
-          <span>Already an operator?</span>
-          <span class="text-accent"><a href="#">Log in</a></span>
-        </div>
-      </section>
-      <section class="success-section hidden">
-        <div class="wrapper">
-          <img src="./assets/images/icon-hex-check.svg" alt="" />
-          <h3>// Handshake complete</h3>
-          <p>
-            Operator <span class="text-accent">[callsign]</span> provisioned.
-            Your account is ready.
-          </p>
-          <button class="success-btn btn-accent">Continue to log in</button>
-        </div>
+            <button type="submit" class="btn-accent">Initialize account</button>
+          </form>
+          <!-- Sign-up form ends -->
+          <div class="form__footer">
+            <span>Already an operator?</span>
+            <span class="text-accent"><a href="#">Log in</a></span>
+          </div>
+        </section>
+        <section class="success-section hidden">
+          <div class="wrapper">
+            <img src="./assets/images/icon-hex-check.svg" alt="" />
+            <h3>// Handshake complete</h3>
+            <p>
+              Operator <span class="text-accent">[callsign]</span> provisioned.
+              Your account is ready.
+            </p>
+            <button class="success-btn btn-accent">Continue to log in</button>
+          </div>
+        </section>
+        <div class="bg-corner bg-corner-top"></div>
+        <div class="bg-corner bg-corner-bottom"></div>
       </section>
     </main>
   </body>

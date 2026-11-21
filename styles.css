@@ -302,6 +302,31 @@ h1 {
   background-color: var(--clr-neutral-700);
 }
 
+/* ## BG CORNER ## */
+
+.form-and-success-section {
+  position: relative;
+}
+
+.bg-corner {
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+}
+
+.bg-corner-top {
+  border-block-start: 1px solid var(--lime-500);
+  border-inline-start: 1px solid var(--lime-500);
+  top: 0;
+}
+
+.bg-corner-bottom {
+  border-block-end: 1px solid var(--lime-500);
+  border-inline-end: 1px solid var(--lime-500);
+  bottom: 0;
+  right: 0;
+}
+
 /* ### SUCCESS SECTION ### */
 
 .success-section .wrapper {
