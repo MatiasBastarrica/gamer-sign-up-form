@@ -15,53 +15,197 @@
     <title>Frontend Mentor | Gamer sign-up form</title>
   </head>
   <body>
-    <!-- Brand column starts -->
-
-    <!-- NEONCORE logo -->
-
-    // Join the nexus Initialize your NEONCORE identity
-
-    <!-- Operator ID readout (on tablet and mobile it becomes a one-line strip: Operator ID + callsign) -->
-    Operator ID
-    <!-- Dynamic: ready count, then "Provisioned" after success -->
-    [0]/5 ready
-    <!-- Dynamic: "Unassigned" until the callsign is valid, then the callsign -->
-    Unassigned Callsign Email Password Confirm Terms
-
-    <!-- Dynamic: row statuses -->
-    Pending Required OK Locked
-
-    <!-- Dynamic: fault codes shown on a row when its field has an error -->
-    Missing Too short Too long Bad character Malformed Mismatch
-
-    <!-- Brand column ends -->
-
-    <!-- Sign-up form starts -->
-
-    New operator All fields required
-    <!-- Mobile -->
-    All required > Callsign e.g. Vortex_07 3–20 characters: letters, numbers, _
-    or - Enter a callsign Use at least 3 characters Use 20 characters or fewer
-    Use letters, numbers, _ or - only > Email you@example.com Enter your email
-    Enter a valid email, like you@example.com > Password
-    <!-- Show / hide password button -->
-    At least 8 characters
-    <!-- Dynamic: password strength -->
-    Weak Fair Good Strong Enter a password Use at least 8 characters > Confirm
-    password
-    <!-- Show / hide password button -->
-    Confirm your password Passwords don't match I accept the Terms and Privacy
-    Policy. Accept the terms to continue Initialize account
-    <!-- Loading -->
-    Transmitting_ Already an operator? Log in
-
-    <!-- Sign-up form ends -->
-
-    <!-- Success view starts -->
-
-    // Handshake complete Operator [callsign] provisioned. Your account is
-    ready. Continue to log in
-
-    <!-- Success view ends -->
+    <main>
+      <!-- Brand column starts -->
+      <section class="display-section">
+        <div class="display-section__header">
+          <img src="./assets/images/logo.svg" alt="" class="logo" />
+        </div>
+        <h1>// Join the nexus</h1>
+        <p class="subtitle">Initialize your NEONCORE identity</p>
+        <hr />
+        <!-- Operator ID readout (on tablet and mobile it becomes a one-line strip: Operator ID + callsign) -->
+        <div class="operator-id-readout">
+          <span>Operator ID</span>
+          <span class="callsign-tab-mob">Unassigned</span>
+          <!-- Dynamic: ready count, then "Provisioned" after success -->
+          <span class="ready-count-desk">[0]/5 ready</span>
+        </div>
+        <div class="extra-readout-desk">
+          <!-- Dynamic: "Unassigned" until the callsign is valid, then the callsign -->
+          <h2>Unassigned</h2>
+          <!-- Dynamic: row statuses -->
+          <!-- Pending Required OK Locked -->
+          <!-- Dynamic: fault codes shown on a row when its field has an error -->
+          <!-- Missing Too short Too long Bad character Malformed Mismatch -->
+          <ul>
+            <li>
+              <span class="field">Callsign</span
+              ><span class="field-status">pending</span>
+            </li>
+            <li>
+              <span class="field">Email</span
+              ><span class="field-status">pending</span>
+            </li>
+            <li>
+              <span class="field">Password</span
+              ><span class="field-status">pending</span>
+            </li>
+            <li>
+              <span class="field">Confirm</span
+              ><span class="field-status">pendig</span>
+            </li>
+            <li>
+              <span class="field">terms</span
+              ><span class="field-status">required</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Brand column ends -->
+      <!-- Sign-up form starts -->
+      <section class="form-section">
+        <div class="form__header">
+          <span class="header-title">New operator</span>
+          <span class="form-fields-info-desk">All fields required</span>
+          <!-- Mobile -->
+          <span class="form-fields-info-mob">All required</span>
+        </div>
+        <form action="#">
+          <div class="input-field">
+            <label for="callsign">> Callsign</label>
+            <input
+              type="text"
+              name="callsign"
+              id="callsign"
+              placeholder="e.g. Vortex_07"
+            />
+            <div class="input-field-validation-msgs">
+              <span class="info-msg"
+                >3–20 characters: letters, numbers, _ or -</span
+              >
+              <span class="error-msg-container">
+                <span><img src="./assets/images/icon-alert.svg" alt="" /></span>
+                <span class="error-message">
+                  <span class="missing-msg">Enter a callsign</span>
+                  <span class="too-short-msg">Use at least 3 characters</span>
+                  <span class="too-long-msg">Use 20 characters or fewer</span>
+                  <span class="bad-character-msg">
+                    Use letters, numbers, _ or - only
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="input-field">
+            <label for="callsign">> Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="you@example.com"
+            />
+            <div class="input-field-validation-msgs">
+              <span class="error-msg-container">
+                <span><img src="./assets/images/icon-alert.svg" alt="" /></span>
+                <span class="error-message">
+                  <span class="missing-msg">Enter your email</span>
+                  <span class="bad-malformed-msg">
+                    Enter a valid email, like you@example.com
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="input-field">
+            <label for="callsign">> Password</label>
+            <div class="password-input-container">
+              <input type="password" name="password" id="password" />
+              <button class="toggle-password-btn">
+                <img src="./assets/images/icon-eye.svg" alt="" />
+              </button>
+            </div>
+            <!-- Dynamic: password strength -->
+            <!-- Weak Fair Good Strong password -->
+            <div class="password-strenght-container">
+              <div class="first-level"></div>
+              <div class="second-level"></div>
+              <div class="third level"></div>
+              <div class="fourth-level"></div>
+            </div>
+            <div class="input-field-validation-msgs">
+              <span class="info-msg">At least 8 characters</span>
+              <span class="error-msg-container">
+                <span><img src="./assets/images/icon-alert.svg" alt="" /></span>
+                <span class="error-message">
+                  <span class="missing-msg">Enter a password</span>
+                  <span class="too-short-msg">Use at least 8 characters</span>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="input-field">
+            <label for="callsign">> Confirm</label>
+            <div class="password-input-container">
+              <input
+                type="password"
+                name="confirm-password"
+                id="confirm-password"
+              />
+              <button class="toggle-password-btn">
+                <img src="./assets/images/icon-eye.svg" alt="" />
+              </button>
+            </div>
+            <div class="input-field-validation-msgs">
+              <span class="info-msg">At least 8 characters</span>
+              <span class="error-msg-container">
+                <span><img src="./assets/images/icon-alert.svg" alt="" /></span>
+                <span class="error-message">
+                  <span class="missing-msg">Confirm your password</span>
+                  <span class="mismatch-msg">Passwords don't match</span>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name="terms-and-privacy"
+                id="terms-and-privacy"
+              />
+              <span
+                >I accept the <span>Terms</span> and
+                <span>Privacy Policy</span>.</span
+              >
+            </div>
+            <div class="input-field-validation-msgs">
+              <span class="error-msg-container">
+                <span><img src="./assets/images/icon-alert.svg" alt="" /></span>
+                <span class="error-message">
+                  <span class="missing-msg">Accept the terms to continue</span>
+                </span>
+              </span>
+            </div>
+          </div>
+          <!-- Loading
+    Transmitting_ -->
+          <button type="submit">Initialize account</button>
+        </form>
+        <!-- Sign-up form ends -->
+        <div class="form__footer">
+          <span>Already an operator?</span>
+          <span>Log in</span>
+        </div>
+      </section>
+      <section class="success-section">
+        <img src="./assets/images/icon-hex-check.svg" alt="" />
+        <h3>// Handshake complete</h3>
+        <p>
+          Operator <span>[callsign]</span> provisioned. Your account is ready.
+        </p>
+        <button class="success-btn">Continue to log in</button>
+      </section>
+    </main>
   </body>
 </html>
