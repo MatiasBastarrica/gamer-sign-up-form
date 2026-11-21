@@ -178,6 +178,10 @@ a {
   text-decoration-style: dotted;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /* ### DISPLAY SECTION ### */
 
 .display-section {
@@ -267,6 +271,35 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.password-input-container input {
+  width: 100%;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: 0;
+  right: 0.8rem;
+  transform: translateY(50%);
+}
+
+.password-strength-container {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.password-strength-container > div {
+  height: 0.2rem;
+  margin-block-start: 0.2rem;
+  flex: 1;
+  background-color: var(--clr-neutral-700);
 }
 
 /* ### SUCCESS SECTION ### */
