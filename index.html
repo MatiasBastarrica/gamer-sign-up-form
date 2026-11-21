@@ -30,9 +30,9 @@
           <span>Operator ID</span>
           <span class="callsign-tab-mob">Unassigned</span>
           <!-- Dynamic: ready count, then "Provisioned" after success -->
-          <span class="ready-count-desk">[0]/5 ready</span>
+          <span class="ready-count-desk hidden">[0]/5 ready</span>
         </div>
-        <div class="extra-readout-desk">
+        <div class="extra-readout-desk hidden">
           <!-- Dynamic: "Unassigned" until the callsign is valid, then the callsign -->
           <h2>Unassigned</h2>
           <!-- Dynamic: row statuses -->
@@ -54,7 +54,7 @@
             </li>
             <li>
               <span class="field">Confirm</span
-              ><span class="field-status">pendig</span>
+              ><span class="field-status">pending</span>
             </li>
             <li>
               <span class="field">terms</span
@@ -68,7 +68,7 @@
       <section class="form-section">
         <div class="form__header">
           <span class="header-title">New operator</span>
-          <span class="form-fields-info-desk">All fields required</span>
+          <span class="form-fields-info-desk hidden">All fields required</span>
           <!-- Mobile -->
           <span class="form-fields-info-mob">All required</span>
         </div>
@@ -87,16 +87,20 @@
               <span class="info-msg"
                 >3–20 characters: letters, numbers, _ or -</span
               >
-              <span class="error-msg-container">
-                <span><img src="./assets/images/icon-alert.svg" alt="" /></span>
-                <span class="error-message">
-                  <span class="missing-msg">Enter a callsign</span>
-                  <span class="too-short-msg">Use at least 3 characters</span>
-                  <span class="too-long-msg">Use 20 characters or fewer</span>
-                  <span class="bad-character-msg">
-                    Use letters, numbers, _ or - only
+              <span class="error-msg-container hidden">
+                <div class="wrapper">
+                  <span
+                    ><img src="./assets/images/icon-alert.svg" alt=""
+                  /></span>
+                  <span class="error-message">
+                    <span class="missing-msg">Enter a callsign</span>
+                    <span class="too-short-msg">Use at least 3 characters</span>
+                    <span class="too-long-msg">Use 20 characters or fewer</span>
+                    <span class="bad-character-msg">
+                      Use letters, numbers, _ or - only
+                    </span>
                   </span>
-                </span>
+                </div>
               </span>
             </div>
           </div>
@@ -109,14 +113,18 @@
               placeholder="you@example.com"
             />
             <div class="input-field-validation-msgs">
-              <span class="error-msg-container">
-                <span><img src="./assets/images/icon-alert.svg" alt="" /></span>
-                <span class="error-message">
-                  <span class="missing-msg">Enter your email</span>
-                  <span class="bad-malformed-msg">
-                    Enter a valid email, like you@example.com
+              <span class="error-msg-container hidden">
+                <div class="wrapper">
+                  <span
+                    ><img src="./assets/images/icon-alert.svg" alt=""
+                  /></span>
+                  <span class="error-message">
+                    <span class="missing-msg">Enter your email</span>
+                    <span class="bad-malformed-msg">
+                      Enter a valid email, like you@example.com
+                    </span>
                   </span>
-                </span>
+                </div>
               </span>
             </div>
           </div>
@@ -138,12 +146,16 @@
             </div>
             <div class="input-field-validation-msgs">
               <span class="info-msg">At least 8 characters</span>
-              <span class="error-msg-container">
-                <span><img src="./assets/images/icon-alert.svg" alt="" /></span>
-                <span class="error-message">
-                  <span class="missing-msg">Enter a password</span>
-                  <span class="too-short-msg">Use at least 8 characters</span>
-                </span>
+              <span class="error-msg-container hidden">
+                <div class="wrapper">
+                  <span
+                    ><img src="./assets/images/icon-alert.svg" alt=""
+                  /></span>
+                  <span class="error-message">
+                    <span class="missing-msg">Enter a password</span>
+                    <span class="too-short-msg">Use at least 8 characters</span>
+                  </span>
+                </div>
               </span>
             </div>
           </div>
@@ -163,12 +175,16 @@
             </div>
             <div class="input-field-validation-msgs">
               <span class="info-msg">At least 8 characters</span>
-              <span class="error-msg-container">
-                <span><img src="./assets/images/icon-alert.svg" alt="" /></span>
-                <span class="error-message">
-                  <span class="missing-msg">Confirm your password</span>
-                  <span class="mismatch-msg">Passwords don't match</span>
-                </span>
+              <span class="error-msg-container hidden">
+                <div class="wrapper">
+                  <span
+                    ><img src="./assets/images/icon-alert.svg" alt=""
+                  /></span>
+                  <span class="error-message">
+                    <span class="missing-msg">Confirm your password</span>
+                    <span class="mismatch-msg">Passwords don't match</span>
+                  </span>
+                </div>
               </span>
             </div>
           </div>
@@ -187,17 +203,23 @@
               >
             </div>
             <div class="input-field-validation-msgs">
-              <span class="error-msg-container">
-                <span><img src="./assets/images/icon-alert.svg" alt="" /></span>
-                <span class="error-message">
-                  <span class="missing-msg">Accept the terms to continue</span>
-                </span>
+              <span class="error-msg-container hidden">
+                <div class="wrapper">
+                  <span
+                    ><img src="./assets/images/icon-alert.svg" alt=""
+                  /></span>
+                  <span class="error-message">
+                    <span class="missing-msg"
+                      >Accept the terms to continue</span
+                    >
+                  </span>
+                </div>
               </span>
             </div>
           </div>
           <!-- Loading
     Transmitting_ -->
-          <button type="submit">Initialize account</button>
+          <button type="submit" class="btn-accent">Initialize account</button>
         </form>
         <!-- Sign-up form ends -->
         <div class="form__footer">
@@ -213,7 +235,7 @@
             Operator <span class="text-accent">[callsign]</span> provisioned.
             Your account is ready.
           </p>
-          <button class="success-btn">Continue to log in</button>
+          <button class="success-btn btn-accent">Continue to log in</button>
         </div>
       </section>
     </main>
