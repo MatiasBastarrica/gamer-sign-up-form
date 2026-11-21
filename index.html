@@ -24,13 +24,16 @@
         </div>
         <h1><span class="text-accent">//</span> Join the nexus</h1>
         <p class="subtitle">Initialize your NEONCORE identity</p>
-        <hr />
         <!-- Operator ID readout (on tablet and mobile it becomes a one-line strip: Operator ID + callsign) -->
         <div class="operator-id-readout">
           <span>Operator ID</span>
-          <span class="callsign-tab-mob">Unassigned</span>
+          <span class="callsign-tab-mob operator-id-readout-status"
+            >Unassigned</span
+          >
           <!-- Dynamic: ready count, then "Provisioned" after success -->
-          <span class="ready-count-desk hidden">[0]/5 ready</span>
+          <span class="ready-count-desk operator-id-readout-status hidden"
+            >[0]/5 ready</span
+          >
         </div>
         <div class="extra-readout-desk hidden">
           <!-- Dynamic: "Unassigned" until the callsign is valid, then the callsign -->

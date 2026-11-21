@@ -155,6 +155,13 @@ body {
   color: var(--clr-neutral-300);
   font-family: "JetBrains Mono", monospace;
   font-weight: 400;
+  padding: 1.8rem 0.9rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 h1,
@@ -169,6 +176,33 @@ h3 {
 a {
   color: var(--lime-500);
   text-decoration-style: dotted;
+}
+
+/* ### DISPLAY SECTION ### */
+
+.display-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+h1 {
+  margin-block-start: 1.4rem;
+}
+
+.operator-id-readout {
+  margin-block-start: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-block-start: 0.5rem;
+  border-block-start: 1px solid var(--clr-neutral-700);
+}
+
+.operator-id-readout-status {
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 /* ### FORM SECTION ### */
