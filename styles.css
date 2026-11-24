@@ -86,6 +86,8 @@ h6 {
   --lime-alpha-40: hsl(77 90% 59% / 0.4);
   --navy-alpha-80: hsl(214 60% 2% / 0.8);
   --navy-alpha-60: hsl(214 60% 2% / 0.6);
+
+  --icon-check: url("./assets/images/icon-tick-16.svg");
 }
 
 /* ### FONTS ### */
@@ -300,6 +302,62 @@ h1 {
   margin-block-start: 0.2rem;
   flex: 1;
   background-color: var(--clr-neutral-700);
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.checkbox-container label {
+  text-transform: none;
+}
+
+#terms-and-privacy {
+  appearance: none;
+  display: inline-grid;
+  place-content: center;
+  inline-size: var(--checkbox-size);
+  aspect-ratio: 1;
+  margin: 0;
+  /* border: 2px solid currentColor; */
+  cursor: pointer;
+  /* border: none; */
+  padding: 0.2rem;
+  align-self: flex-start;
+
+  &::before {
+    content: "";
+    inline-size: 1rem;
+    aspect-ratio: 1;
+    background-color: #060a0e;
+    mask: var(--checkbox-icon) no-repeat center / contain;
+    scale: 0;
+    border: none;
+    @media (forced-colors: active) {
+      background-color: CanvasText;
+    }
+  }
+
+  &:checked {
+    --checkbox-icon: var(--icon-check);
+    background-color: var(--lime-500);
+  }
+
+  &:is(:checked, :indeterminate)::before {
+    scale: 1;
+  }
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 }
 
 /* ## BG CORNER ## */
